@@ -28,26 +28,25 @@ submission
 
 ## Setup Environment - Anaconda
 ```
-conda create --name main-ds python=3.9
+conda create --name main-ds python=3.11
 conda activate main-ds
 pip install -r requirements.txt
 ```
 
 ## Setup Environment - Shell/Terminal
 ```
-mkdir proyek_analisis_data
-cd proyek_analisis_data
+cd submission
 pipenv install
 pipenv shell
 pip install -r requirements.txt
 ```
 
 ## Run Streamlit App
-Jalankan dari folder utama proyek (yang berisi `requirements.txt`):
 ```
 streamlit run dashboard/dashboard.py
 ```
 
 ## Dashboard Online
-(https://submissionkelasbelajarfundamentalindah-mh3cqeqf56zvioxzswivwl.streamlit.app/)
+https://submissionkelasbelajarfundamentalindah-mh3cqeqf56zvioxzswivwl.streamlit.app/
+
 
