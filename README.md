@@ -10,8 +10,16 @@ submission
 │   ├── dashboard.py
 │   ├── main_data.csv
 │   └── state_geo.csv
-├── data
-│   └── (9 file CSV dataset Olist)
+├── data/
+│   ├── customers_dataset.csv
+│   ├── geolocation_dataset.csv
+│   ├── order_items_dataset.csv
+│   ├── order_payments_dataset.csv
+│   ├── order_reviews_dataset.csv
+│   ├── orders_dataset.csv
+│   ├── product_category_name_translation.csv
+│   ├── products_dataset.csv
+│   └── sellers_dataset.csv
 ├── notebook.ipynb
 ├── README.md
 ├── requirements.txt
@@ -41,4 +49,5 @@ streamlit run dashboard/dashboard.py
 ```
 
 ## Dashboard Online
-[https://[nama-app-kamu].streamlit.app](https://submissionkelasbelajarfundamentalindah-mh3cqeqf56zvioxzswivwl.streamlit.app/)
+(https://submissionkelasbelajarfundamentalindah-mh3cqeqf56zvioxzswivwl.streamlit.app/)
+
