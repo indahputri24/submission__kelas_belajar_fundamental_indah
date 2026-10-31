@@ -18,7 +18,6 @@ SEGMENT_ORDER = [
 ]
 
 
-# ----------------------------- Helper -----------------------------
 @st.cache_data
 def load_data():
     cols = [
@@ -77,7 +76,6 @@ def show_fig(fig):
     plt.close(fig)
 
 
-# ----------------------------- Data & Filter -----------------------------
 df, geo_df = load_data()
 
 st.title("🛒 Dashboard Analisis E-Commerce Olist")
@@ -119,9 +117,8 @@ if fdf.empty:
     st.warning("Tidak ada data pada filter yang dipilih. Ubah rentang tanggal atau state.")
     st.stop()
 
-orders_df = fdf.drop_duplicates(subset="order_id")  # data level pesanan
+orders_df = fdf.drop_duplicates(subset="order_id")
 
-# ----------------------------- KPI -----------------------------
 avg_review = orders_df["review_score"].mean()
 late_pct_all = orders_df["is_late"].mean() * 100
 
@@ -138,7 +135,6 @@ tab1, tab2, tab3 = st.tabs([
     "Pertanyaan 3: Segmentasi RFM",
 ])
 
-# ----------------------------- Tab 1: Revenue -----------------------------
 with tab1:
     st.subheader("Kategori produk dengan revenue terbesar")
 
@@ -218,7 +214,6 @@ with tab1:
         f"Revenue bulanan tertinggi terjadi pada **{peak_month}** ({peak_rev * 1000:,.0f} BRL)."
     )
 
-# ----------------------------- Tab 2: Pengiriman & Review -----------------------------
 with tab2:
     st.subheader("Review score berdasarkan ketepatan pengiriman")
 
@@ -340,7 +335,6 @@ with tab2:
         plt.tight_layout()
         show_fig(fig)
 
-# ----------------------------- Tab 3: RFM -----------------------------
 with tab3:
     st.subheader("Segmentasi pelanggan berdasarkan RFM")
 
